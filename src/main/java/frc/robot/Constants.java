@@ -22,4 +22,6 @@ public final class Constants {
     public static final int TEST_MOTOR_ID = 0;
     public static final int LIMIT_SWITCH_ID = 0;
 
+    public static final double WHEEL_CIRCUMFERENCE = Math.PI*8;
+
 }
