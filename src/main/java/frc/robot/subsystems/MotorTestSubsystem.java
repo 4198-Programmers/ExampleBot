@@ -7,9 +7,8 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
-
 public class MotorTestSubsystem extends SubsystemBase {
-    
+
     private CANSparkMax testMotor = new CANSparkMax(Constants.TEST_MOTOR_ID, MotorType.kBrushless);
     DigitalInput limitSwitch = new DigitalInput(Constants.LIMIT_SWITCH_ID);
 
@@ -20,8 +19,8 @@ public class MotorTestSubsystem extends SubsystemBase {
     public void stopMotor() {
         testMotor.stopMotor();
     }
-    
-    public boolean limitStatus(){
+
+    public boolean limitStatus() {
         return limitSwitch.get();
     }
 

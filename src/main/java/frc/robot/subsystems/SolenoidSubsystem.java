@@ -9,7 +9,6 @@ import com.revrobotics.CANSparkMax;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.Solenoid;
 
-
 public class SolenoidSubsystem extends SubsystemBase {
 
     private Solenoid solenoid = new Solenoid(0, PneumaticsModuleType.CTREPCM, 0);

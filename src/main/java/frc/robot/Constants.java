@@ -18,7 +18,8 @@ public final class Constants {
     public static final int BACK_RIGHT_MOTOR = 0;
     public static final int BACK_LEFT_MOTOR = 0;
     public static final int FRONT_RIGHT_MOTOR = 0;
-
-  
+    public static final int XBOX_CONTROLLER = 0;
+    public static final int TEST_MOTOR_ID = 0;
+    public static final int LIMIT_SWITCH_ID = 0;
 
 }
