@@ -20,7 +20,7 @@ public class SwerveModule {
 
   private static final double kModuleMaxAngularVelocity = Drivetrain.kMaxAngularSpeed;
   private static final double kModuleMaxAngularAcceleration =
-      2 * Math.PI; // radians per second squared
+      2 * Math.PI; // radians per second square
 
   private final PWMSparkMax m_driveMotor;
   private final PWMSparkMax m_turningMotor;
