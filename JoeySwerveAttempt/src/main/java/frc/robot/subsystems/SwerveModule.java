@@ -6,17 +6,20 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 
 public class SwerveModule {
 
-    private static CANSparkMax driveMotorName;
-    private static RelativeEncoder driveEncoderName;
+    private static CANSparkMax driveMotor;
+    private static RelativeEncoder driveEncoder;
     private static int driveMotorID;
+    private static CANSparkMax steeringMotor;
+    private static int steeringMotorID;
 
 
-    public void SwerveModule(CANSparkMax driveMotorName, int driveMotorID, RelativeEncoder driveEncoderName, ) {
+    public void SwerveModule(CANSparkMax driveMotor, int driveMotorID, RelativeEncoder driveEncoder, CANSparkMax steeringMotor, int steeringMotorID) {
         //Swerve Drive 
-        driveMotorName = new CANSparkMax(driveMotorID, MotorType.kBrushless);
-        driveEncoderName = driveMotorName.getEncoder();
+        driveMotor = new CANSparkMax(driveMotorID, MotorType.kBrushless);
+        driveEncoder = driveMotor.getEncoder();
 
-        //Swerve Angle
+        //Swerve Steering 
+        steeringMotor = new CANSparkMax(steeringMotorID, MotorType.kBrushless);
         
 
     }
