@@ -13,7 +13,7 @@ public class MotorTestSubsystem extends SubsystemBase {
     DigitalInput limitSwitch = new DigitalInput(Constants.LIMIT_SWITCH_ID);
 
     public void runTestMotor() {
-        testMotor.set(1);
+        testMotor.set(0.05);
     }
 
     public void stopMotor() {
