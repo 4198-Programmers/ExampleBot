@@ -26,4 +26,6 @@ public final class Constants {
 
     public static final double WHEEL_CIRCUMFERENCE = Math.PI*8;
 
+    public static final double DRIVE_SPEED = 0.5;
+
 }

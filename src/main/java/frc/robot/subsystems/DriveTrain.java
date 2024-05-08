@@ -29,7 +29,7 @@ public class DriveTrain {
     private RelativeEncoder backLeftEncoder = backLeftMotor.getEncoder();
     private RelativeEncoder backRightEncoder = backRightMotor.getEncoder();
 
-    DifferentialDrive tankDrive = new DifferentialDrive(
+    DifferentialDrive tankDrive = new DifferentialDrive (
         (double leftOutput) -> {
             frontLeftMotor.set(leftOutput);
             backLeftMotor.set(leftOutput);
@@ -40,6 +40,10 @@ public class DriveTrain {
         }
     );
     
+    public void drive(double zRotate, double xAxis){
+        tankDrive.arcadeDrive(Constants.DRIVE_SPEED * zRotate, Constants.DRIVE_SPEED * xAxis);
+    }
+
     // Simple function to get robot position in inches for a wheel with a diameter of 8 inches
     public double getRobotPosition() {
         double positionAverage = ((frontLeftEncoder.getPosition() + frontRightEncoder.getPosition() + backLeftEncoder.getPosition() + backRightEncoder.getPosition()) / (4*Constants.WHEEL_CIRCUMFERENCE));
