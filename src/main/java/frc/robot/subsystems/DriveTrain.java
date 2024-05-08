@@ -4,7 +4,6 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.RelativeEncoder;
 
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.motorcontrol.MotorController;
 
 import com.revrobotics.CANSparkLowLevel.MotorType;
 import frc.robot.Constants;
@@ -41,7 +40,7 @@ public class DriveTrain {
     );
     
     public void drive(double zRotate, double xAxis){
-        tankDrive.arcadeDrive(Constants.DRIVE_SPEED * zRotate, Constants.DRIVE_SPEED * xAxis);
+        tankDrive.arcadeDrive(Constants.DRIVE_SPEED * xAxis, Constants.DRIVE_SPEED * zRotate);
     }
 
     // Simple function to get robot position in inches for a wheel with a diameter of 8 inches
