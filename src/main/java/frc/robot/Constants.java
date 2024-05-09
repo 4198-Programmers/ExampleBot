@@ -13,7 +13,31 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-  public static class OperatorConstants {
-    public static final int kDriverControllerPort = 0;
-  }
+    public static class OperatorConstants {
+        public static final int kDriverControllerPort = 0;
+    }
+
+    //Front Left Swerve Module
+    public static final int FRONT_LEFT_DRIVE_ID = 0;
+    public static final int FRONT_LEFT_STEERING_MOTOR_ID = 0;
+    public static final int FRONT_LEFT_STEERING_ENCODER_ID = 0;
+    public static final int FRONT_LEFT_ENCODER_OFFSET = 0;
+  
+    //Front Right Swerve Module
+    public static final int FRONT_RIGHT_DRIVE_ID = 0;
+    public static final int FRONT_RIGHT_STEERING_MOTOR_ID = 0;
+    public static final int FRONT_RIGHT_STEERING_ENCODER_ID = 0;
+    public static final int FRONT_RIGHT_ENCODER_OFFSET = 0;
+  
+    //Back Left Swerve Module
+    public static final int BACK_LEFT_STEERING_MOTOR_ID = 0;
+    public static final int BACK_LEFT_STEERING_ENCODER_ID = 0;
+    public static final int BACK_LEFT_ENCODER_OFFSET = 0;
+    public static final int BACK_LEFT_DRIVE_ID = 0;
+  
+    //Back Right Swerve Module
+    public static final int BACK_RIGHT_DRIVE_ID = 0;
+    public static final int BACK_RIGHT_STEERING_MOTOR_ID = 0;
+    public static final int BACK_RIGHT_STEERING_ENCODER_ID = 0;
+    public static final int BACK_RIGHT_ENCODER_OFFSET = 0;
 }
