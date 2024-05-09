@@ -4,11 +4,12 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.RelativeEncoder;
 
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import com.revrobotics.CANSparkLowLevel.MotorType;
 import frc.robot.Constants;
 
-public class DriveTrain {
+public class DriveTrain extends SubsystemBase {
     /*
      * The first portion of any code is used to define items
      * a CANSparkMax is a type of motor

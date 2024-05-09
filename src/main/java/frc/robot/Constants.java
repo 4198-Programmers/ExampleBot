@@ -19,13 +19,13 @@ public final class Constants {
     public static final int BACK_LEFT_MOTOR = 3;
     public static final int FRONT_RIGHT_MOTOR = 1;
     public static final int XBOX_CONTROLLER = 3;
-    public static final int TEST_MOTOR_ID = 1;
+    public static final int TEST_MOTOR_ID = 5;
     public static final int LIMIT_SWITCH_ID = 0;
 
     public static final double DEADZONE = 0.1;
 
     public static final double WHEEL_CIRCUMFERENCE = Math.PI*8;
 
-    public static final double DRIVE_SPEED = 0.5;
+    public static final double DRIVE_SPEED = 1;
 
 }

@@ -6,8 +6,10 @@ package frc.robot;
 
 //import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
+import frc.robot.commands.DriveCommandXbox;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.MotorTestCommand;
+import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.MotorTestSubsystem;
 import edu.wpi.first.wpilibj.Compressor;
@@ -30,15 +32,19 @@ public class RobotContainer {
 	private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
 	private final MotorTestSubsystem m_motorTestSubsystem = new MotorTestSubsystem();
 
-	private Compressor compressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
-	
 	// Replace with CommandPS4Controller or CommandJoystick if needed
 	private final CommandXboxController m_driverController = new CommandXboxController(Constants.XBOX_CONTROLLER);
 
+	private Compressor compressor = new Compressor(0, PneumaticsModuleType.CTREPCM);
+	private final DriveTrain drive = new DriveTrain();
+	private final DriveCommandXbox driveCommand = new DriveCommandXbox(m_driverController, drive);
+	
+	
 	/**
 	 * The container for the robot. Contains subsystems, OI devices, and commands.
 	 */
 	public RobotContainer() {
+		drive.setDefaultCommand(driveCommand);
 		// Configure the trigger bindings
 		configureBindings();
 		compressor.enableDigital();
